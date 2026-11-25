@@ -12,7 +12,7 @@ Introduction au DevOps - ISG Sousse - 3 LIG - Enseignante : Zaineb Sakhrawi
 - `Client/Dockerfile` : image du client React/Vite (build puis `serve` sur le port 3000)
 - `docker-compose.yml` : services mongodb, server, client sur le reseau `mern-network` (bridge)
 - `Jenkinsfile` : pipeline Checkout, Build, Deploy, Smoke Test, Push Docker Hub
-- `captures/` : captures d'ecran (pipeline Jenkins, images, conteneurs)
+- `Captures/` : captures d'ecran (pipeline Jenkins, images, conteneurs)
 
 ## Commandes utilisees et leur role
 
@@ -56,4 +56,3 @@ Introduction au DevOps - ISG Sousse - 3 LIG - Enseignante : Zaineb Sakhrawi
 
 Note : le service Jenkins sous Windows ne dispose pas de la commande `docker compose`. Le pipeline utilise donc les commandes `docker build` et `docker run` equivalentes. Le fichier `docker-compose.yml` est teste en local avec `docker compose up --build`.
 
-Note : le service Jenkins sous Windows n a pas la commande docker compose. Le pipeline utilise donc docker build et docker run. Le fichier docker-compose.yml est teste en local avec docker compose up --build.
