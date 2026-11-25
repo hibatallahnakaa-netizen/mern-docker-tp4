@@ -49,7 +49,11 @@ Introduction au DevOps - ISG Sousse - 3 LIG - Enseignante : Zaineb Sakhrawi
 
 ## Pipeline Jenkins
 1. Checkout : recuperation du code depuis GitHub
-2. Build images : `docker compose build`
-3. Deploy : `docker compose up -d`
+2. Build images : docker build du serveur et du client
+3. Deploy : reseau mern-network puis docker run de mongodb, server et client
 4. Smoke Test : verification que le client repond (HTTP 200)
-5. Push (Docker Hub) : connexion avec les identifiants Jenkins `dockerhub-creds` puis `docker compose push`
+5. Push (Docker Hub) : connexion avec dockerhub-creds puis docker push des deux images
+
+Note : le service Jenkins sous Windows ne dispose pas de la commande `docker compose`. Le pipeline utilise donc les commandes `docker build` et `docker run` equivalentes. Le fichier `docker-compose.yml` est teste en local avec `docker compose up --build`.
+
+Note : le service Jenkins sous Windows n a pas la commande docker compose. Le pipeline utilise donc docker build et docker run. Le fichier docker-compose.yml est teste en local avec docker compose up --build.
